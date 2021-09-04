@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>qrattend</name>
+    </assembly>
+    <members>
+        <member name="T:qrattend.Controllers.AttendanceController">
+            attendance controller
+        </member>
+        <member name="M:qrattend.Controllers.AttendanceController.#ctor(qrattend.Repository.Contract.IAttendanceRepository{qrattend.Entities.Attendance})">
+            controller
+        </member>
+        <member name="M:qrattend.Controllers.AttendanceController.GetAllAttendance">
+            GET: api/qrattend/GetAllAttendance  
+        </member>
+        <member name="M:qrattend.Controllers.AttendanceController.GetAttendanceByClassAndDate(System.Int32,System.String)">
+            get class attendance 
+        </member>
+        <member name="M:qrattend.Controllers.AttendanceController.PostAttendance(System.Int32,System.Int32,System.String)">
+            post attendance 
+        </member>
+        <member name="T:qrattend.Controllers.ClassController">
+            class controller 
+        </member>
+        <member name="M:qrattend.Controllers.ClassController.#ctor(qrattend.Repository.Contract.IClassRepository{qrattend.Entities.Class})">
+            controls class 
+        </member>
+        <member name="M:qrattend.Controllers.ClassController.GetAllClass">
+            GET: api/qrattend/GetAllClass  
+        </member>
+        <member name="M:qrattend.Controllers.ClassController.PostClass(System.Int32,System.String)">
+            posts class 
+        </member>
+        <member name="T:qrattend.Controllers.HomeController">
+            homecontroller 
+        </member>
+        <member name="M:qrattend.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{qrattend.Controllers.HomeController})">
+            home controller 
+        </member>
+        <member name="M:qrattend.Controllers.HomeController.Index">
+            okay
+        </member>
+        <member name="M:qrattend.Controllers.HomeController.Privacy">
+            okay 
+        </member>
+        <member name="M:qrattend.Controllers.HomeController.Error">
+            sure
+        </member>
+        <member name="T:qrattend.Controllers.RosterController">
+            the controller 
+        </member>
+        <member name="M:qrattend.Controllers.RosterController.#ctor(qrattend.Repository.Contract.IRosterRepository{qrattend.Entities.Roster})">
+            the controller  
+        </member>
+        <member name="M:qrattend.Controllers.RosterController.GetAllRoster">
+            GET: api/qrattend/GetAllRoster  
+        </member>
+        <member name="M:qrattend.Controllers.RosterController.GetRosterByClassId(System.Int32)">
+            gets roster for class 
+        </member>
+        <member name="M:qrattend.Controllers.RosterController.AddStudentToRoster(System.Int32,System.Int32)">
+            posts a Roster 
+        </member>
+        <member name="T:qrattend.Controllers.StudentController">
+            the controller 
+        </member>
+        <member name="M:qrattend.Controllers.StudentController.#ctor(qrattend.Repository.Contract.IStudentRepository{qrattend.Entities.Student})">
+            the controller  
+        </member>
+        <member name="M:qrattend.Controllers.StudentController.GetAllStudent">
+            GET: api/qrattend/GetAllStudent  
+        </member>
+        <member name="M:qrattend.Controllers.StudentController.PostStudent(System.String,System.String,System.String)">
+            posts a student 
+        </member>
+        <member name="T:qrattend.Controllers.TeacherController">
+            Teacher controller 
+        </member>
+        <member name="M:qrattend.Controllers.TeacherController.#ctor(qrattend.Repository.Contract.ITeacherRepository{qrattend.Entities.Teacher})">
+            teacher controller 
+        </member>
+        <member name="M:qrattend.Controllers.TeacherController.GetAllTeacher">
+            GET: api/qrattend/GetAllTeacher  
+        </member>
+        <member name="M:qrattend.Controllers.TeacherController.GetByUserNameAndPassword(System.String,System.String)">
+            get teacher by username and password 
+        </member>
+        <member name="M:qrattend.Controllers.TeacherController.PostTeacher(System.String,System.String,System.String,System.String,System.String)">
+            posts a teacher 
+        </member>
+        <member name="T:qrattend.Entities.Attendance">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Attendance.Id">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Attendance.ClassId">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Attendance.StudentId">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Attendance.Date">
+            xml to do 
+        </member>
+        <member name="T:qrattend.Entities.Class">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Class.Id">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Class.TeacherId">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Class.ClassName">
+            xml to do 
+        </member>
+        <member name="T:qrattend.Entities.Roster">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Roster.Id">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Roster.ClassId">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Roster.StudentId">
+            xml to do 
+        </member>
+        <member name="T:qrattend.Entities.Student">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Student.Id">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Student.FirstName">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Student.MiddleName">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Student.LastName">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Student.PictureUrl">
+            xml to do 
+        </member>
+        <member name="T:qrattend.Entities.Teacher">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Teacher.Id">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Teacher.FirstName">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Teacher.MiddleName">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Teacher.LastName">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Teacher.PictureUrl">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Teacher.UserName">
+            xml to do 
+        </member>
+        <member name="P:qrattend.Entities.Teacher.Password">
+            xml to do 
+        </member>
+        <member name="T:qrattend.Models.ErrorViewModel">
+            f
+        </member>
+        <member name="P:qrattend.Models.ErrorViewModel.RequestId">
+            f
+        </member>
+        <member name="P:qrattend.Models.ErrorViewModel.ShowRequestId">
+            f
+        </member>
+        <member name="T:qrattend.Repository.Contract.IAttendanceRepository`1">
+            attendance repository
+        </member>
+        <member name="M:qrattend.Repository.Contract.IAttendanceRepository`1.GetAllAttendances">
+            gets all attendance
+        </member>
+        <member name="M:qrattend.Repository.Contract.IAttendanceRepository`1.PostAttendance(System.Int32,System.Int32,System.String)">
+            posts the attendance 
+        </member>
+        <member name="M:qrattend.Repository.Contract.IAttendanceRepository`1.GetAttendanceByClassAndDate(System.Int32,System.String)">
+            gets by class and date
+        </member>
+        <member name="T:qrattend.Repository.Contract.IClassRepository`1">
+            class repository 
+        </member>
+        <member name="M:qrattend.Repository.Contract.IClassRepository`1.GetAllClasses">
+            gets all classes 
+        </member>
+        <member name="M:qrattend.Repository.Contract.IClassRepository`1.PostClass(System.Int32,System.String)">
+            posts the class 
+        </member>
+        <member name="T:qrattend.Repository.Contract.IRosterRepository`1">
+            Roster repository 
+        </member>
+        <member name="M:qrattend.Repository.Contract.IRosterRepository`1.GetAllRosters">
+            gets all Roster
+        </member>
+        <member name="M:qrattend.Repository.Contract.IRosterRepository`1.GetRosterByClassId(System.Int32)">
+            gets the roster by the class id 
+        </member>
+        <member name="M:qrattend.Repository.Contract.IRosterRepository`1.AddStudentToRoster(System.Int32,System.Int32)">
+            adds student to the roster 
+        </member>
+        <member name="T:qrattend.Repository.Contract.IStudentRepository`1">
+            student repository 
+        </member>
+        <member name="M:qrattend.Repository.Contract.IStudentRepository`1.GetAllStudents">
+            gets all student
+        </member>
+        <member name="M:qrattend.Repository.Contract.IStudentRepository`1.PostStudent(System.String,System.String,System.String)">
+            posts the student 
+        </member>
+        <member name="T:qrattend.Repository.Contract.ITeacherRepository`1">
+            teacher repository 
+        </member>
+        <member name="M:qrattend.Repository.Contract.ITeacherRepository`1.GetAllTeachers">
+            gets all the teachers 
+        </member>
+        <member name="M:qrattend.Repository.Contract.ITeacherRepository`1.GetByUserNameAndPassword(System.String,System.String)">
+            gets all teacher by username and password 
+        </member>
+        <member name="M:qrattend.Repository.Contract.ITeacherRepository`1.PostTeacher(System.String,System.String,System.String,System.String,System.String)">
+            posts the teacher 
+        </member>
+        <member name="T:qrattend.Repository.Implementation.AttendanceRepository">
+            attendance repository
+        </member>
+        <member name="M:qrattend.Repository.Implementation.AttendanceRepository.#ctor(qrattend.LibraryContext)">
+            sets up the repo with the database context
+        </member>
+        <member name="M:qrattend.Repository.Implementation.AttendanceRepository.GetAllAttendances">
+            gets a list of all the Attendances
+        </member>
+        <member name="M:qrattend.Repository.Implementation.AttendanceRepository.GetAttendanceByClassAndDate(System.Int32,System.String)">
+            gets attendance by class and date 
+        </member>
+        <member name="M:qrattend.Repository.Implementation.AttendanceRepository.makeItReadable(System.Collections.Generic.IEnumerable{qrattend.Entities.Attendance},System.Int32)">
+            make it readable 
+        </member>
+        <member name="M:qrattend.Repository.Implementation.AttendanceRepository.PostAttendance(System.Int32,System.Int32,System.String)">
+            adds a Attendance to the database
+        </member>
+        <member name="T:qrattend.Repository.Implementation.ClassRepository">
+            class repository
+        </member>
+        <member name="M:qrattend.Repository.Implementation.ClassRepository.#ctor(qrattend.LibraryContext)">
+            sets up the repo with the database context
+        </member>
+        <member name="M:qrattend.Repository.Implementation.ClassRepository.ClassRepositoryRefresh(qrattend.LibraryContext)">
+            refreshes repo for testing
+        </member>
+        <member name="M:qrattend.Repository.Implementation.ClassRepository.GetAllClasses">
+            gets a list of all the Classs
+        </member>
+        <member name="M:qrattend.Repository.Implementation.ClassRepository.PostClass(System.Int32,System.String)">
+            adds a Class to the database
+        </member>
+        <member name="T:qrattend.Repository.Implementation.RosterRepository">
+            Roster repository 
+        </member>
+        <member name="M:qrattend.Repository.Implementation.RosterRepository.#ctor(qrattend.LibraryContext)">
+            sets up the repo with the database context
+        </member>
+        <member name="M:qrattend.Repository.Implementation.RosterRepository.GetAllRosters">
+            gets a list of all the Rosters
+        </member>
+        <member name="M:qrattend.Repository.Implementation.RosterRepository.AddStudentToRoster(System.Int32,System.Int32)">
+            adds a Roster to the database
+        </member>
+        <member name="M:qrattend.Repository.Implementation.RosterRepository.GetRosterByClassId(System.Int32)">
+            gets the roster by the class id 
+        </member>
+        <member name="T:qrattend.Repository.Implementation.StudentRepository">
+            student repository 
+        </member>
+        <member name="M:qrattend.Repository.Implementation.StudentRepository.#ctor(qrattend.LibraryContext)">
+            sets up the repo with the database context
+        </member>
+        <member name="M:qrattend.Repository.Implementation.StudentRepository.StudentRepositoryRefresh(qrattend.LibraryContext)">
+            refreshes repo for testing
+        </member>
+        <member name="M:qrattend.Repository.Implementation.StudentRepository.GetAllStudents">
+            gets a list of all the Students
+        </member>
+        <member name="M:qrattend.Repository.Implementation.StudentRepository.PostStudent(System.String,System.String,System.String)">
+            adds a Student to the database
+        </member>
+        <member name="T:qrattend.Repository.Implementation.TeacherRepository">
+            teacher repository
+        </member>
+        <member name="M:qrattend.Repository.Implementation.TeacherRepository.#ctor(qrattend.LibraryContext)">
+            sets up the repo with the database context
+        </member>
+        <member name="M:qrattend.Repository.Implementation.TeacherRepository.TeacherRepositoryRefresh(qrattend.LibraryContext)">
+            refreshes repo for testing
+        </member>
+        <member name="M:qrattend.Repository.Implementation.TeacherRepository.GetAllTeachers">
+            gets a list of all the Teachers
+        </member>
+        <member name="M:qrattend.Repository.Implementation.TeacherRepository.GetByUserNameAndPassword(System.String,System.String)">
+            gets teacher by username and password 
+        </member>
+        <member name="M:qrattend.Repository.Implementation.TeacherRepository.PostTeacher(System.String,System.String,System.String,System.String,System.String)">
+            adds a Teacher to the database
+        </member>
+    </members>
+</doc>
