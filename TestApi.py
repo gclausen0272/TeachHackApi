@@ -20,7 +20,9 @@ print(response.text)
 import requests 
         # public IActionResult PostTeacher(string middleName, string firstName,string lastName, string userName, string password)  
 
-url = "https://localhost:5001/api/qrattend/GetTeacherClasses?teacherId=1"
+url = "https://localhost:5001/api/qrattend/GetByUserNameAndPassword?userName=jjones&password=password"
+# url = "https://localhost:5001/api/qrattend/GetAllTeacher"
+
 payload={}
 headers = {}
 response = requests.request("GET", url,verify = False, data=payload)

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using qrattend.Repository.Contract;
 using qrattend.Entities;
 using System.Linq;
-
+using System;
 namespace qrattend.Repository.Implementation
 {
     ///teacher repository
@@ -30,7 +30,8 @@ namespace qrattend.Repository.Implementation
         ///gets teacher by username and password 
         public Teacher GetByUserNameAndPassword(string userName, string password)  {
             IEnumerable<Teacher> teachers = _libraryContext.Teachers.ToList().Where(x=>x.UserName == userName && x.Password == password);
-            if(teachers.Count() ==1){
+            Console.WriteLine(teachers);
+            if(teachers.Count() >=1){
                 return teachers.FirstOrDefault();
             }
             return new Teacher{Id = -1, MiddleName = "", FirstName = "", LastName = "", UserName = "", Password = ""};     

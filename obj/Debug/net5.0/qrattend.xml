@@ -316,5 +316,8 @@
         <member name="M:qrattend.Repository.Implementation.TeacherRepository.PostTeacher(System.String,System.String,System.String,System.String,System.String)">
             adds a Teacher to the database
         </member>
+        <member name="M:qrattend.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        </member>
     </members>
 </doc>

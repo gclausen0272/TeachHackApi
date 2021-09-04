@@ -35,7 +35,7 @@ namespace qrattend.Controllers
         }
 
         ///get teacher by username and password 
-        [HttpPost]  
+        [HttpGet]  
         [Route("GetByUserNameAndPassWord")]  
         public IActionResult GetByUserNameAndPassword(string userName, string password)  
         {     

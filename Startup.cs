@@ -33,17 +33,26 @@ namespace qrattend
             services.AddScoped<IAttendanceRepository<Attendance>, AttendanceRepository>();              
             services.AddScoped<IClassRepository<Class>, ClassRepository>();              
             services.AddScoped<IRosterRepository<Roster>,RosterRepository>();
-            
+
             services.AddDbContext<LibraryContext>(op => op.UseMySql(                     
                         Configuration["ConnectionString:db"],
                         new MySqlServerVersion(new Version(8, 0, 21)), 
                          options=> options.EnableRetryOnFailure())
                     .EnableSensitiveDataLogging()
                     .EnableDetailedErrors());
+        services.AddDistributedMemoryCache();
+
+        services.AddSession(options =>
+        {
+            options.IdleTimeout = TimeSpan.FromSeconds(10);
+            options.Cookie.HttpOnly = true;
+            options.Cookie.IsEssential = true;
+        });
+
         
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -60,6 +69,7 @@ namespace qrattend
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSession();
 
             app.UseAuthorization();
 

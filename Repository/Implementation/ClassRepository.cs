@@ -2,9 +2,7 @@ using System.Collections.Generic;
 using qrattend.Repository.Contract;
 using qrattend.Entities;
 using System.Linq;
-using System.Net.Http;
-using System.Net;
-using System.Threading.Tasks;
+
 namespace qrattend.Repository.Implementation
 {
     ///class repository
