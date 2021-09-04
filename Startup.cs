@@ -31,7 +31,9 @@ namespace qrattend
             services.AddScoped<ITeacherRepository<Teacher>, TeacherRepository>();              
             services.AddScoped<IStudentRepository<Student>, StudentRepository>();              
             services.AddScoped<IAttendanceRepository<Attendance>, AttendanceRepository>();              
-
+            services.AddScoped<IClassRepository<Class>, ClassRepository>();              
+            services.AddScoped<IRosterRepository<Roster>,RosterRepository>();
+            
             services.AddDbContext<LibraryContext>(op => op.UseMySql(                     
                         Configuration["ConnectionString:db"],
                         new MySqlServerVersion(new Version(8, 0, 21)), 

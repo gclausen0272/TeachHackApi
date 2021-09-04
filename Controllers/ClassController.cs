@@ -29,6 +29,13 @@ namespace qrattend.Controllers
             return Ok(Classs);  
         }
         
+        [HttpGet]  
+        [Route("GetTeacherClasses")]  
+        public IActionResult GetTeacherClasses(int teacherId)  
+        {     
+            IEnumerable<Class> Classs = _ClassRepository.GetTeacherClasses(teacherId);  
+            return Ok(Classs);  
+        }
         ///posts class 
         [HttpPost]  
         [Route("PostClass")]  

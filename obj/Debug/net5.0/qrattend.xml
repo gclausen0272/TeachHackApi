@@ -259,6 +259,9 @@
         <member name="M:qrattend.Repository.Implementation.ClassRepository.ClassRepositoryRefresh(qrattend.LibraryContext)">
             refreshes repo for testing
         </member>
+        <member name="M:qrattend.Repository.Implementation.ClassRepository.GetTeacherClasses(System.Int32)">
+            gets teachers classes
+        </member>
         <member name="M:qrattend.Repository.Implementation.ClassRepository.GetAllClasses">
             gets a list of all the Classs
         </member>

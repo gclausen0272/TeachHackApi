@@ -23,6 +23,12 @@ namespace qrattend.Repository.Implementation
             _libraryContext = context;
         }
 
+        ///gets teachers classes
+        public IEnumerable<Class> GetTeacherClasses(int teacherId){
+            var k =  _libraryContext.Classes.ToList().Where(x => x.TeacherId == teacherId);
+            return k;
+        }
+
         ///gets a list of all the Classs
         public IEnumerable<Class> GetAllClasses()  
         {  

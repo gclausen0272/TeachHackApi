@@ -11,7 +11,16 @@ print(response.text)
 import requests 
         # public IActionResult PostTeacher(string middleName, string firstName,string lastName, string userName, string password)  
 
-url = "https://localhost:5001/api/qrattend/GetAttendanceByClassAndDate?classId=1&date=today"
+url = "https://qr-attend.herokuapp.com/api/qrattend/GetAttendanceByClassAndDate?classId=1&date=today"
+payload={}
+headers = {}
+response = requests.request("GET", url,verify = False, data=payload)
+print(response.text)
+
+import requests 
+        # public IActionResult PostTeacher(string middleName, string firstName,string lastName, string userName, string password)  
+
+url = "https://localhost:5001/api/qrattend/GetTeacherClasses?teacherId=1"
 payload={}
 headers = {}
 response = requests.request("GET", url,verify = False, data=payload)
