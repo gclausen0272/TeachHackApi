@@ -25,8 +25,8 @@ namespace qrattend.Repository.Implementation
         }
 
         ///adds a Roster to the database
-        public Roster AddStudentToRoster( int studentID, int classId){
-            Roster Roster = new Roster{StudentId = studentID, ClassId = classId};
+        public Roster AddStudentToRoster( int classId, int studentId){
+            Roster Roster = new Roster{StudentId = studentId, ClassId = classId};
             _libraryContext.Add(Roster);
             _libraryContext.SaveChanges();
             return Roster;
