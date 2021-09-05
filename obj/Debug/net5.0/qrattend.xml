@@ -16,7 +16,7 @@
         <member name="M:qrattend.Controllers.AttendanceController.GetAttendanceByClassAndDate(System.Int32,System.String)">
             get class attendance 
         </member>
-        <member name="M:qrattend.Controllers.AttendanceController.PostAttendance(System.Int32,System.Int32,System.String)">
+        <member name="M:qrattend.Controllers.AttendanceController.PostAttendance(System.Collections.Generic.IEnumerable{System.Int32},System.Int32,System.String)">
             post attendance 
         </member>
         <member name="T:qrattend.Controllers.ClassController">
@@ -184,7 +184,7 @@
         <member name="M:qrattend.Repository.Contract.IAttendanceRepository`1.GetAllAttendances">
             gets all attendance
         </member>
-        <member name="M:qrattend.Repository.Contract.IAttendanceRepository`1.PostAttendance(System.Int32,System.Int32,System.String)">
+        <member name="M:qrattend.Repository.Contract.IAttendanceRepository`1.PostAttendance(System.Collections.Generic.IEnumerable{System.Int32},System.Int32,System.String)">
             posts the attendance 
         </member>
         <member name="M:qrattend.Repository.Contract.IAttendanceRepository`1.GetAttendanceByClassAndDate(System.Int32,System.String)">
@@ -247,7 +247,7 @@
         <member name="M:qrattend.Repository.Implementation.AttendanceRepository.makeItReadable(System.Collections.Generic.IEnumerable{qrattend.Entities.Attendance},System.Int32)">
             make it readable 
         </member>
-        <member name="M:qrattend.Repository.Implementation.AttendanceRepository.PostAttendance(System.Int32,System.Int32,System.String)">
+        <member name="M:qrattend.Repository.Implementation.AttendanceRepository.PostAttendance(System.Collections.Generic.IEnumerable{System.Int32},System.Int32,System.String)">
             adds a Attendance to the database
         </member>
         <member name="T:qrattend.Repository.Implementation.ClassRepository">

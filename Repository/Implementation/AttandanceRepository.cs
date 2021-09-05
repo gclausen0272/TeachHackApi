@@ -70,12 +70,14 @@ namespace qrattend.Repository.Implementation
         }
 
         ///adds a Attendance to the database
-        public Attendance PostAttendance(int studentId, int classId, string date){
+        public List<string> PostAttendance(IEnumerable<int>  studentIdL, int classId, string date){
             //adds new Attendances and saves database
-            Attendance Attendance = new Attendance{StudentId = studentId, ClassId = classId, Date = date};
-            _libraryContext.Add(Attendance);
-            _libraryContext.SaveChanges();
-            return Attendance;
+            foreach(int studentId in studentIdL){
+                Attendance Attendance = new Attendance{StudentId = studentId, ClassId = classId, Date = date};
+                _libraryContext.Add(Attendance);
+                _libraryContext.SaveChanges();
+            }
+            return GetAttendanceByClassAndDate(classId,date);
         }
     }  
 }

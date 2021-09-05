@@ -45,7 +45,7 @@ namespace qrattend.Controllers
         ///post attendance 
         [HttpPost]  
         [Route("PostAttendance")]  
-        public IActionResult PostAttendance(int studentId, int classId, string date)  
+        public IActionResult PostAttendance(IEnumerable<int> studentId, int classId, string date)  
         {  
             var resp = _AttendanceRepository.PostAttendance(studentId, classId, date);  
             return Ok(resp);  

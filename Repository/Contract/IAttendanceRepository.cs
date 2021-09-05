@@ -8,7 +8,7 @@ namespace qrattend.Repository.Contract
         ///gets all attendance
         IEnumerable<T> GetAllAttendances();
         ///posts the attendance 
-        T PostAttendance(int studentId, int classId, string date);
+        List<string> PostAttendance(IEnumerable<int>  studentId, int classId, string date);
 
         ///gets by class and date
        List<string> GetAttendanceByClassAndDate(int classId, string date );

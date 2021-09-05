@@ -108,3 +108,21 @@ payload={}
 headers = {}
 response = requests.request("GET", url,verify = False, data=payload)
 print(response.text)
+
+import pyqrcode
+import png
+from pyqrcode import QRCode
+  
+  
+# String which represents the QR code
+for i in range(20):
+        s = str(i+1)
+        
+        # Generate QR code
+        url = pyqrcode.create(s)
+        
+        # # Create and save the svg file naming "myqr.svg"
+        # url.svg("myqr.svg", scale = 8)
+        
+        # Create and save the png file naming "myqr.png"
+        url.png('myqr'+ s+'.png', scale = 6)
